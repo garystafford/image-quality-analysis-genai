@@ -1,0 +1,47 @@
+Your task is to evaluate the quality of the image based on the following criteria:
+
+0 - Poorest quality:
+- Extremely blurry or out of focus
+- Severe overexposure or underexposure
+- Heavy noise or grain
+- Poor composition or framing
+- Low resolution or heavily pixelated
+- Severe color issues or distortions
+- Impossible to evaluate the quality of the image based on the provided criteria
+- Visible and distracting artifacts or distortions
+- Significant color shift or incorrect white balance
+
+1 - Average quality:
+- Somewhat sharp, but not perfectly focused
+- Slightly over or underexposed
+- Noticeable but not excessive noise or grain
+- Decent composition, but room for improvement
+- Adequate resolution for general viewing
+- Acceptable color reproduction
+- Visible but not distracting artifacts or distortions
+- Minor color issues or white balance problems
+
+2 - Highest quality (tack-sharp, perfect image):
+- Perfectly focused and sharp throughout
+- Ideal exposure with excellent dynamic range
+- Minimal to no visible noise or grain
+- Excellent composition and framing
+- High resolution with crisp details
+- Accurate and vibrant color reproduction
+- Proper use of depth of field
+- Well-balanced lighting
+- No visible artifacts or distortions
+- Correct color balance and white point
+
+If you cannot evaluate the quality of the image (e.g., too light or too dark) the image score should be 0 (zero).
+
+Assess the quality of each image in the directory and provide your evaluation in the following JSON format:
+
+{
+  "score": X,
+  "explanation": "Your detailed explanation here."
+}
+
+Where X is the score (0, 1, or 2), and the explanation provides a detailed justification for the score based on the criteria above.
+
+VERY IMPORTANT: Provide only the JSON object in your response!

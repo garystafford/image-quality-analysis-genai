@@ -1,0 +1,11 @@
+anthropic
+azure-ai-inference
+azure-core
+azure-identity
+boto3
+botocore
+google-generativeai
+mistralai
+pillow
+python-dotenv
+requests
