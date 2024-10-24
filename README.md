@@ -1,6 +1,6 @@
-# Evaluating Image Quality Using SOTA Multimodal Generative AI Vision Models
+# Quantitative and Qualitative Image Analysis Using Nine Different Multimodal Generative AI Vision Models
 
-Learn to employ a variety of open- and closed-weight vision models from model builders Anthropic, Google, Meta AI, Microsoft, Mistral, NVIDIA, and OpenAI to analyze image quality.
+Learn to analyze image quality using state-of-the-art vision models from Anthropic, Google, Meta, Microsoft, Mistral, NVIDIA, and OpenAI.
 
 ## Installation Instructions
 
