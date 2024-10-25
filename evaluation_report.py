@@ -25,6 +25,6 @@ for file in sorted(os.listdir("output")):
         # Scores as list
         print(scores)
 
-        # Print scores (1 per line)
+        # Print 1 score per line - easy to paste into Excel to analyze
         for score in scores:
             print(score)
