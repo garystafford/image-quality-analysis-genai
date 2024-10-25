@@ -168,9 +168,7 @@ def main() -> None:
 
     # Write the JSON results to a file
     try:
-        with open(
-            f"output/image_quality_azure_microsoft_{MODEL_ID}.json", "w"
-        ) as f:
+        with open(f"output/image_quality_azure_microsoft_{MODEL_ID}.json", "w") as f:
             f.write(json.dumps(scores, indent=2))
     except Exception as e:
         logging.error(f"Error writing results to file: {e}")

@@ -111,9 +111,7 @@ def main() -> None:
 
     # Write the JSON results to a file
     try:
-        with open(
-            "output/image_quality_bedrock_llama3-2-90b-instruct.json", "w"
-        ) as f:
+        with open("output/image_quality_bedrock_llama3-2-90b-instruct.json", "w") as f:
             f.write(json.dumps(scores, indent=2))
     except Exception as e:
         logging.error(f"Error writing results to file: {e}")

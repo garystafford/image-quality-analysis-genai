@@ -18,7 +18,7 @@ from utilities import Utilities
 # Set up logging
 logger = logging.getLogger(__name__)
 logging.basicConfig(
-    level=logging.DEBUG, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 )
 
 # Constants
@@ -120,9 +120,7 @@ def main() -> None:
 
     # Write the JSON results to a file
     try:
-        with open(
-            f"output/image_quality_anthropic_{MODEL_ID}.json", "w"
-        ) as f:
+        with open(f"output/image_quality_anthropic_{MODEL_ID}.json", "w") as f:
             f.write(json.dumps(scores, indent=2))
     except Exception as e:
         logging.error(f"Error writing results to file: {e}")
