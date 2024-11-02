@@ -6,7 +6,7 @@ Learn to analyze image quality using state-of-the-art vision models from Anthrop
 
 ### 1. Setup a Python 3 Virtual Environment
 
-Create a Python 3 virtual environment and install all required Python packages. Instructions are for Windows and Mac. I'm currently running Python 3.12.7.
+Create a Python 3 virtual environment and install all required Python packages. Instructions are for Windows and Mac. I'm currently running Python 3.12.x.
 
 #### Windows
 
@@ -17,6 +17,7 @@ python -m pip install virtualenv -U
 python -m venv .venv
 .venv\Scripts\activate
 
+python -m pip install --upgrade pip
 python -m pip install -r requirements.txt -U
 ```
 
@@ -25,10 +26,11 @@ python -m pip install -r requirements.txt -U
 ```sh
 python --version
 
-python -m pip install virtualenv -U
+python -m pip install virtualenv -U # --break-system-package
 python -m venv .venv
 source .venv/bin/activate
 
+python -m pip install --upgrade pip
 python -m pip install -r requirements.txt -U
 ```
 
@@ -106,7 +108,7 @@ az login
   "scores": [
     {
       "score": 2,
-            "explanation": "The image is perfectly focused and sharp throughout. The exposure is ideal with excellent dynamic range, and there is minimal to no visible noise or grain. The composition and framing are excellent, capturing the entire bathroom area effectively. The resolution is high with crisp details, and the color reproduction is accurate and vibrant. The lighting is well-balanced, and there are no visible artifacts or distortions. The color balance and white point are correct.",
+      "explanation": "The image is perfectly focused and sharp throughout. The exposure is ideal with excellent dynamic range, and there is minimal to no visible noise or grain. The composition and framing are excellent, capturing the entire bathroom area effectively. The resolution is high with crisp details, and the color reproduction is accurate and vibrant. The lighting is well-balanced, and there are no visible artifacts or distortions. The color balance and white point are correct.",
       "image_id": "image_01.jpg",
       "model_id": "openai-gpt-4o-2024-05-13",
       "temperature": 0.0,
@@ -115,7 +117,7 @@ az login
     },
     {
       "score": 1,
-            "explanation": "The image is somewhat sharp but not perfectly focused. The exposure is slightly underexposed, and there is noticeable but not excessive noise. The composition is decent, with the subject well-framed, but there is room for improvement. The resolution is adequate for general viewing, and the color reproduction is acceptable. There are no visible artifacts or distortions, and the color balance is mostly correct, though there are minor issues.",
+      "explanation": "The image is somewhat sharp but not perfectly focused. The exposure is slightly underexposed, and there is noticeable but not excessive noise. The composition is decent, with the subject well-framed, but there is room for improvement. The resolution is adequate for general viewing, and the color reproduction is acceptable. There are no visible artifacts or distortions, and the color balance is mostly correct, though there are minor issues.",
       "image_id": "image_02.jpg",
       "model_id": "openai-gpt-4o-2024-05-13",
       "temperature": 0.0,
@@ -124,7 +126,7 @@ az login
     },
     {
       "score": 0,
-            "explanation": "The image is extremely blurry and out of focus, particularly in the background. The exposure is poor, with the fire being overexposed and the surrounding area underexposed. There is noticeable noise and grain, and the composition is not ideal. The resolution appears low, and there are significant color issues due to the lighting conditions. Overall, the image quality is poor and does not meet the criteria for higher scores.",
+      "explanation": "The image is extremely blurry and out of focus, particularly in the background. The exposure is poor, with the fire being overexposed and the surrounding area underexposed. There is noticeable noise and grain, and the composition is not ideal. The resolution appears low, and there are significant color issues due to the lighting conditions. Overall, the image quality is poor and does not meet the criteria for higher scores.",
       "image_id": "image_03.jpg",
       "model_id": "openai-gpt-4o-2024-05-13",
       "temperature": 0.0,
@@ -133,7 +135,7 @@ az login
     },
     {
       "score": 0,
-            "explanation": "The image is of poor quality due to several factors: it is overexposed, resulting in loss of detail in the white areas of the birds. The composition is poor, with the fence obstructing the view and creating a distracting pattern. The image also appears to have noise and grain, and the overall resolution is low, leading to a lack of crisp details. Additionally, the color balance is off, with a significant color shift. These issues make it difficult to evaluate the quality of the image based on the provided criteria.",
+      "explanation": "The image is of poor quality due to several factors: it is overexposed, resulting in loss of detail in the white areas of the birds. The composition is poor, with the fence obstructing the view and creating a distracting pattern. The image also appears to have noise and grain, and the overall resolution is low, leading to a lack of crisp details. Additionally, the color balance is off, with a significant color shift. These issues make it difficult to evaluate the quality of the image based on the provided criteria.",
       "image_id": "image_04.jpg",
       "model_id": "openai-gpt-4o-2024-05-13",
       "temperature": 0.0,

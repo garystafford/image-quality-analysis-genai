@@ -39,7 +39,7 @@ from azure.core.credentials import AzureKeyCredential
 from dotenv import load_dotenv
 from PIL import Image
 
-from utilities import Utilities
+import utilities
 
 # Constants
 MODEL_ID = "llama-3-2-11b-vision-instruct"
@@ -104,7 +104,7 @@ def main() -> None:
             image_path = os.path.join(DIRECTORY, filename)
             image = Image.open(image_path)
             file_format = "jpeg" if image.format.lower() in ["jpg", "jpeg"] else "png"
-            image_base64 = Utilities.image_to_base64(image, file_format)
+            image_base64 = utilities.image_to_base64(image, file_format)
 
             messages = [
                 {
@@ -152,7 +152,7 @@ def main() -> None:
             tt = round(t1 - t0, 2)
             logging.debug(f"Processed {filename} in {tt:.2f} seconds")
 
-            result = Utilities.truncate(response_text)
+            result = utilities.truncate(response_text)
             result["image_id"] = filename
             result["model_id"] = MODEL_ID
             result["temperature"] = TEMPERATURE
@@ -167,7 +167,7 @@ def main() -> None:
     logging.info(json.dumps(scores, indent=2))
 
     # Count the scores
-    logging.info(f"Scores: {Utilities.count_scores(scores)}")
+    logging.info(f"Scores: {utilities.count_scores(scores)}")
 
     # Write the JSON results to a file
     try:
